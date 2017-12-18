@@ -41,12 +41,19 @@ public class ParameterizedTest {
 	@Parameters(name = "{index}: testAdd({0}+{1}) = {2}")
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] { 
-			{ 1, 1, 2 }, { 2, 2, 4 }, { 8, 2, 10 }, { 4, 5, 9 }, { 5, 5, 10 } });
+			{ 1, 1, 3 }, { 2, 2, 4 }, { 8, 2, 10 }, { 4, 5, 9 }, { 5, 5, 10 } });
 	}
 
 	@Test
 	public void test_addTwoNumbes() {
 		assertThat(MathUtils.add(numberA, numberB), is(expected));
 	}
+	
+	@Test
+	public void test_addTwoNumbes2() {
+		assertThat(MathUtils.add(numberA, numberB), is(expected + 5));
+	}
+	
+	
 
 }

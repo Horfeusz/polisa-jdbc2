@@ -30,11 +30,8 @@ public class ListStringTest {
 
 	@Test
 	public void testAssertList() {
-		List<String> actual = Arrays.asList("a", "b", "c");
-		List<String> expected = Arrays.asList("a", "b", "c");
-
 		// All passed / true
-
+		
 		// 1. Test equal.
 		assertThat(actual, is(expected));
 
@@ -44,6 +41,7 @@ public class ListStringTest {
 		// 3. Check List Size
 		assertThat(actual, hasSize(3));
 
+		
 		assertThat(actual.size(), is(3));
 
 		// 4. List order

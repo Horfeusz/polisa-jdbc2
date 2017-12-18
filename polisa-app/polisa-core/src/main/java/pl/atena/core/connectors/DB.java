@@ -12,20 +12,16 @@ public class DB {
 
 	private DB() {
 	}
-
+	
 	private static void init() throws SQLException {
 		try {
 			Class.forName("org.sqlite.JDBC");
 			conn = DriverManager.getConnection("jdbc:sqlite:D:/projekty_akademia/db1/polisa.db");
-			log.info("NawiÄ…zano poÅ‚Ä…czenie z bazÄ… danych");
+			log.info("Nawi¹zano po³¹czenie z baz¹ danych");
 		} catch (Exception e) {
 			log.throwing(DB.class.getCanonicalName(), "init", e);
 			throw new SQLException(e);
 		}
-	}
-
-	public java.sql.Connection getConn() {
-		return conn;
 	}
 
 	public static java.sql.Connection get() throws SQLException {

@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import pl.atena.domain.base.DTO;
 import pl.atena.domain.base.Entity;
 
 /**
@@ -12,7 +13,8 @@ import pl.atena.domain.base.Entity;
  * @author michalh
  *
  */
-public class Polisa extends Entity {
+@Entity(name = "POLISA")
+public class Polisa extends DTO {
 
 	private String nrPolisy;
 

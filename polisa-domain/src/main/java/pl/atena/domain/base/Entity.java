@@ -1,21 +1,15 @@
 package pl.atena.domain.base;
 
-/**
- * Bazowa klasa
- * 
- * @author michalh
- *
- */
-public abstract class Entity {
+import static java.lang.annotation.ElementType.TYPE;
 
-	private Integer id;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-	public Integer getId() {
-		return id;
-	}
+@Retention(RetentionPolicy.RUNTIME)
+@Target(TYPE)
+public @interface Entity {
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	String name() default "";
 
 }
